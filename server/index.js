@@ -53,8 +53,7 @@ const saveToken = (token) => {
   app.post('/token', (req, res) => {
     saveToken(req.body.token.value);
     console.log(`Received push token, ${req.body.token.value}`);
-    res.redirect('http://')
-    res.send(`Received push token, ${req.body.token.value}`);
+     res.send(`Received push token, ${req.body.token.value}`);
   });
 
   // app.post('/message', (req, res) => {
