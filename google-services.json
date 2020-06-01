@@ -34,6 +34,35 @@
           ]
         }
       }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1068061515989:android:43a7dd7fb3c36583e3825c",
+        "android_client_info": {
+          "package_name": "com.denebsoft.bluecheck"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1068061515989-7ae0qecjhf4kikqpu7s0jn8nt4hlaa6j.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAo9uNk_w_gNlB8DEAF4Qu7ZTfRGTxZWjk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1068061515989-7ae0qecjhf4kikqpu7s0jn8nt4hlaa6j.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
     }
   ],
   "configuration_version": "1"

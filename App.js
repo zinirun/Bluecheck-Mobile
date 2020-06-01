@@ -2,12 +2,6 @@
 import { WebView } from 'react-native-webview';
 import React from 'react';
 import {
-  StyleSheet,
-  Text,
-  View,
-  TextInput,
-  Modal,
-  TouchableOpacity, 
   Vibration
 } from 'react-native';
 import { Notifications } from 'expo';
@@ -31,7 +25,7 @@ export default class App extends React.Component {
         finalStatus = status;
       }
       if (finalStatus !== 'granted') {
-        alert('Failed to get push token for push notification!');
+        alert('푸시 알림이 기능이 해제됩니다');
         return;
       }
       token = await Notifications.getExpoPushTokenAsync();
@@ -39,7 +33,7 @@ export default class App extends React.Component {
       this.tokenValue = token;
       this.setState({ expoPushToken: token });
     } else {
-      alert('Must use physical device for Push Notifications');
+      alert('푸시 알림은 기기에서만 이용가능합니다.');
     }
 
     if (Platform.OS === 'android') {
@@ -50,7 +44,7 @@ export default class App extends React.Component {
         vibrate: [0, 250, 250, 250],
       });
     }
-    console.log("출력테스트>>"+this.tokenValue);
+
     //node 서버로 토큰 전송
     return fetch(PUSH_REGISTRATION_ENDPOINT,{
       method:'POST',
@@ -66,7 +60,7 @@ export default class App extends React.Component {
 
   componentDidMount(){
     this.registerForPushNotificationsAsync();
-    this._notificationSubscription = Notifications.addListener(this._handleNotification);
+     this._notificationSubscription = Notifications.addListener(this._handleNotification);
   }
 
   _handleNotification = notification => {
