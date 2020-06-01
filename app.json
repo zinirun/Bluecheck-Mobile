@@ -1,6 +1,6 @@
 {
   "expo": {
-    "name": "bcapp",
+    "name": "Bluecheck",
     "slug": "bcapp",
     "platforms": [
       "ios",
@@ -26,7 +26,8 @@
     },
     "android": {
       "googleServicesFile": "./google-services.json",
-      "package": "Bluecheck.React"
+      "package": "Bluecheck.React",
+      "versionCode":1
 }
   }
 }
