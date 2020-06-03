@@ -8,6 +8,7 @@ import { Notifications } from 'expo';
 import * as Permissions from 'expo-permissions';
 import Constants from 'expo-constants';
 
+// Server URL 설정
 const webUrl = 'http://133.186.150.88:3000/';
 const PUSH_REGISTRATION_ENDPOINT = webUrl + 'token';
 
